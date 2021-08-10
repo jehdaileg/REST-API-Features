@@ -5,24 +5,24 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Changing State') }}</div>
+                <div class="card-header">{{ __('Creating State') }}</div>
 
                 <div class="card-body">
-                    <form method="post" action="{{ route('states.update', $state->id) }}">
+                    <form method="post" action="{{ route('cities.store') }}">
                         @csrf
-                        @method('put')
+                        @method('post')
 
                         <div class="form-group row">
-                            <label for="Country" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
+                            <label for="Country" class="col-md-4 col-form-label text-md-right">{{ __('State') }}</label>
 
                             <div class="col-md-6">
-                             <select name="country_id" id="country_id" class="form-control">
+                             <select name="state_id" id="state_id" class="form-control">
 
-                                <option Selected>Choose a Country</option>
+                                <option Selected>Choose a State</option>
 
-                                @foreach($countries as $country)
+                                @foreach($states as $state)
 
-                                <option value="{{ $country->id }}" {{ $country->id == $state->country_id ? 'selected' : '' }}> {{ $country->name }} </option>
+                                <option value="{{ $state->id }}"> {{ $state->name }} </option>
 
                                 @endforeach
                              </select>
@@ -33,7 +33,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name', $state->name) }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -55,7 +55,6 @@
                     </form>
                 </div>
             </div>
-
         </div>
     </div>
 </div>

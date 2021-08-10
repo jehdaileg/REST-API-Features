@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Backend\CityController;
 use App\Http\Controllers\Backend\TestController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\StateController;
@@ -53,6 +54,8 @@ Route::resource('countries', CountryController::class);
 /* State  */
 
 Route::resource('states', StateController::class);
+
+Route::resource('cities', CityController::class);
 
 
 
