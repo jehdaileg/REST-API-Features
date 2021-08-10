@@ -13,7 +13,7 @@ class EditStateRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,6 +25,8 @@ class EditStateRequest extends FormRequest
     {
         return [
             //
+            'country_id' => ['required'],
+            'name' => ['required']
         ];
     }
 }
