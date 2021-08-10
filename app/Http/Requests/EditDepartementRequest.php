@@ -13,7 +13,7 @@ class EditDepartementRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,6 +25,7 @@ class EditDepartementRequest extends FormRequest
     {
         return [
             //
+            'name' => ['required']
         ];
     }
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\TestController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\StateController;
 use App\Http\Controllers\Backend\CountryController;
+use App\Http\Controllers\Backend\DepartementController;
 use App\Http\Controllers\Backend\ChangePasswordController;
 
 /*
@@ -55,7 +56,17 @@ Route::resource('countries', CountryController::class);
 
 Route::resource('states', StateController::class);
 
+/* City */
+
 Route::resource('cities', CityController::class);
+
+
+/* Departement */
+
+Route::resource('departements', DepartementController::class);
+
+
+/* Employees */
 
 
 
