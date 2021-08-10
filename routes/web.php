@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\TestController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Backend\StateController;
+use App\Http\Controllers\Backend\CountryController;
 use App\Http\Controllers\Backend\ChangePasswordController;
 
 /*
@@ -43,6 +45,20 @@ Route::post('users/{user}/change.password', [ChangePasswordController::class, 'c
 //***************************** */
 
 /* Country  */
+
+Route::resource('countries', CountryController::class);
+
+//***************************** */
+
+/* State  */
+
+Route::resource('states', StateController::class);
+
+
+
+
+
+
 
 
 
