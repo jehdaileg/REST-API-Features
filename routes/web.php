@@ -68,6 +68,23 @@ Route::resource('departements', DepartementController::class);
 
 /* Employees */
 
+//laravel bridge for vue js
+
+Route::get('{any}', function(){
+
+    return view('employees.index');
+
+})->where('any', '.*');
+
+/* bridge */
+/*
+
+Route::get('{any}', function(){
+
+    return view('employees.index');
+})->where('any', '.*');  */
+
+
 
 
 

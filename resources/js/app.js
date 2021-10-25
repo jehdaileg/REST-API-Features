@@ -6,6 +6,14 @@
 
 require('./bootstrap');
 
+import Vue from "vue";
+import VueRouter from "vue-router";
+
+import { routes } from "./routes";
+
+
+
+
 window.Vue = require('vue').default;
 
 /**
@@ -26,7 +34,19 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+
+    mode: 'history',
+    routes: routes
+
+});
+
+
+
 
 const app = new Vue({
     el: '#app',
+    router: router
 });

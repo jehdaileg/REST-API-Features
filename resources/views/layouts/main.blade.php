@@ -26,6 +26,10 @@
 
 <body id="page-top">
 
+    <!-- For vue js configuration   -->
+
+
+
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -295,7 +299,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->username }}</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
                                 <img class="img-profile rounded-circle"
                                     src="img/JehdKing.jpg">
                             </a>
@@ -394,6 +398,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- Bootstrap core JavaScript-->
 
